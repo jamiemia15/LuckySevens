@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+    
+    
+    <head>
+        <title>Lucky Sevens</title>
+        
+        <style>
+            body {
+                align-content: center;
+                text-align: center;
+            }
+            .output {
+                width: 1140px;
+                align-self: center;
+            }
+            table {
+                width: 100%;
+                text-align: left;
+                border-collapse: collapse;
+            }
+            .center-me {
+                display: table;
+                margin: auto;
+            }
+        </style>
+        
+        <script type="text/javascript" src="lucky.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        rel="stylesheet" type="text/css" />
+    </head>
+    
+    <body>
+        
+        <div class="container">
+        
+            <header>
+                <h1>Lucky Sevens</h1>
+            </header>
+
+            <div class="input">
+
+                <form name="form" onsubmit="return validateItems();">
+
+                    <div class="form-group">
+                        <label for="bet">Starting Bet:</label>
+                        <input type="number" id="bet">
+                    </div>
+                    <br />
+                    <button type="submit" id="play" class="btn btn-default" style="background-color: gainsboro">Play</button>
+
+                </form>
+
+            </div>
+
+            <hr />
+
+            <div class="output">
+
+                <div class="header">
+                    <h1>Results</h1>
+                </div>
+                <br />
+                <div class="center-me">
+                    <table style="display: none" id="results" class="table table-striped">
+
+                        <tr>
+                            <td>Starting Bet</td>
+                            <td> $<span id="start"></span> </td>                   
+                        </tr>
+
+                        <tr>
+                            <td>Total Rolls Before Going Broke</td>
+                            <td> <span id="total"></span> </td>
+                        </tr>
+
+                        <tr>
+                            <td>Highest Amount Won</td>
+                            <td> $<span id="highest"></span> </td>
+                        </tr>
+
+                        <tr>
+                            <td>Roll Count At Highest Amount Won</td>
+                            <td> <span id="count"></span> </td>
+                        </tr>
+
+                    </table>
+                </div>
+
+            </div>
+            
+        </div>
+    
+    </body>
+
+
+</html>
